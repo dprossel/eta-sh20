@@ -36,7 +36,7 @@ class SH20Uart:
 #        self.send_message(self.construct_message([0x4d, 0x43], [interval] + sum([[0x08, 0x00, v] for v in values], [])))
 
     def subscribe(self, interval=10):
-        values = sum([[loc.address, uint16(v).as_bytes()] for loc in self.device.locations for v in loc.values], [])
+        values = sum([[loc.address, v.to_bytes(2)] for loc in self.device.locations for v in loc.values], [])
         self.send_message(self.construct_message([0x4d, 0x43], [interval] + values))
 
     def unsubscribe(self):
