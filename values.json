@@ -1,0 +1,26 @@
+{
+    "name": "SH20",
+    "locations": [
+        {
+            "address": 8,
+            "values": [
+                {
+                    "name": "Temperatur_oben",
+                    "register": 12
+                },
+                {
+                    "name": "Temperatur_mitte",
+                    "register": 11
+                },
+                {
+                    "name": "Temperatur_unten",
+                    "register": 10
+                },
+                {
+                    "name": "Temperatur",
+                    "register": 13
+                }
+            ]
+        }
+    ]
+}
